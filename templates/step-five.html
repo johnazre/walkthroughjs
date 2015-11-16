@@ -29,18 +29,20 @@
     <div class="row">
       <div class="col-md-8 col-md-offset-2">
         <div class="row code-examples">
-          <div class="col-md-4 col-md-offset-4">
+          <div class="col-md-8 col-md-offset-2">
             <div class="code-block">
             <code>
-              //Empty arrays are useful for a place to put values. You can declare them empty with no issues.
+              //Empty arrays are useful for a place to put values. You can declare them empty with no issues.<br>
               var emptyArray = []; <br><br>
               //You don't have to declare an array any differently than anything other value on the left side.<br>
               var arrayWithValues = [1, 2, 3, 4];<br><br>
               //Arrays can have any type of value in it, even mixed values!<br>
               var mixedArray = [1, "2", 3, function four { console.log('4')}];<br><br>
-              //We can access a value in the array by using: nameOfTheArray[index]<br>
-              //REMEMBER!!! Arrays are zero-indexed, so if you want the first value in the array, use index zero!<br>
-              //
+              //We can access a value in the array by using: nameOfTheArray[index]<br><br>
+              //REMEMBER!!! Arrays are zero-indexed, so if you want the first value in the array, use index zero!
+              Let's use the arrayWithValues array to pull a couple values. <br>
+              arrayWithValues[1]; //Will pull the second value, 2.
+              arrayWithValues[2]; //Will pull the third value, 3.
             </code>
             </div>
           </div>
@@ -50,12 +52,7 @@
 
     <div class="page-content text-center">
       <div class="content-numbers">
-        <h2>Not sure just what happened there? Let's walk through it. We stated that it was going to be a for loop first. After that,
-        within the parentheses, we declared a variable called "i", set it to equal zero, then put a semi-colon. That variable declaration
-        is telling the loop where to start. After the first semi-colon, we have "i < 6". We are saying do whatever is in the loop while "i"
-        is still less than 6, as soon as it becomes 6, stop the loop. After the second semi-colon, you see "i++". That is shorthand for
-        "i = i + 1". That last part says after every time the loop finished running, add 1 to i.</h2>
-        <h2>Within the loop, all it says is to console.log the variable "i" every time it runs.</h2>
+        <h2>Let's talk about how these can be useful by touching on how to loop through arrays with a for-loop.</h2>
       </div><br>
     </div>
 
@@ -67,13 +64,16 @@
       <div class="row">
         <div class="col-md-8 col-md-offset-2">
           <div class="row code-examples">
-            <div class="col-md-6 col-md-offset-3">
-              <div class="code-block">
-                <code> var i = 1;<br>
-                  while (i < 6) {<br>
-                   console.log(i);<br>
+            <div class="col-md-8 col-md-offset-2">
+              <div class="code-block text-left">
+                <code>
+                  //Let's declare an array, so we have something to loop through: <br>
+                  var array = [1, "apple", 3, "business"]; <br><br>
+                  //Now, let's print out all of the values in the array. <br>
+                  for (var i = 0; i < array.length; i++){<br>
+                   console.log(array[i]);<br>
                   }<br>
-                  //Will log 1, 2, 3, 4, 5, 6;<br>
+                  //Will log: 1, apple, 3, and business;<br>
                  </code>
               </div>
             </div>
@@ -82,11 +82,12 @@
       </div><br>
 
       <h1>Conclusion</h1>
-      <h2>Loops aren't a difficult feat to accomplish. They just take practice and experience to see why they are so useful.</h2>
+      <h2>Arrays are absolutely fundamental to learning Javascript. Knowing how to search and manipulate arrays is one of the
+      most useful skill you can learn, other than manipulating objects, which we're going to learn about next.</h2>
     </div><br>
     <div class="text-center">
       <br>
-      <a ui-sref="step-five">
+      <a ui-sref="step-six">
         <p class="text-right">
           Next
         </p>
