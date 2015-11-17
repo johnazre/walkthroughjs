@@ -88,8 +88,35 @@
       the idea of "return". "return" basically means that when the function is done running, the return is the value/result that you
       wanted from the function. In this case, we wanted to know what answer of 1*2 was, which was "returned" to us and stored inside
       of the variable "x". If we were to ask the browser what the value of "x" is, it would give us a value of 2. Obviously, this only
-      scratches the surface of the usefulness of functions, but this is a place to start.
+      scratches the surface of the usefulness of functions, but this is a place to start. Let's have you give a couple a try!
       </h2>
+      <h1 class="text-center">Your turn!</h1>
+
+
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <div class="row code-examples">
+            <div class="col-md-10 col-md-offset-1">
+              <div class="code-block text-left">
+              <code>
+                //Let's make a function called sumOfTwo that prints out the sum of two numbers. Call the parameters whatever you want, but make sure you use them in the right places. (Use the placeholders in the text boxes for guidance.) <br>
+                //Refer to the functions in examples above for help. <br>
+                function <input type="text" ng-model='func_ex1_name' placeholder="Function Name"> (<input type="text" ng-model="func_ex1_param1" placeholder="First Parameter">, <input type="text" ng-model="func_ex1_param2" placeholder="Second Parameter">) { <br><br>
+                return <input type="text" ng-model="func_ex1_param1" placeholder="First Parameter"> + <input type="text" ng-model="func_ex1_param2" placeholder="Second Parameter">;  <br>
+              } <br><br>
+
+                //Let's create a function called helloThere and have it say hello to someone. As in the last one, follow the cues.<br>
+                function <input type="text" ng-model='func_ex2_name' placeholder="Function Name"> (<input type="text" ng-model="func_ex2_param1" placeholder="First Parameter">) { <br><br>
+                return "Hello, " + <input type="text" ng-model="func_ex2_param1" placeholder="First Parameter">;  <br>
+              } <br><br>
+
+                <div class="text-center"><button class="btn btn-primary" ng-click="checkVarAnswers()">Click to check your answers!</button></div>
+              </code>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <br>
       <a ui-sref="step-three">

@@ -27,6 +27,7 @@ body{
   background: linear-gradient(to right, rgba(248,246,114,1) 0%, rgba(246,243,162,1) 0%, rgba(247,238,75,1) 35%, rgba(235,224,96,1) 100%);
   /*height: 800px;*/
   padding: 20px 0 40px 0;
+  margin-bottom: 22px;
 }
 
 #home-heading{

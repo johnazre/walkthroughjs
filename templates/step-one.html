@@ -23,10 +23,7 @@
           </li>
         </ul><br>
         <h2>Numbers are any plain values with no single or double quotes surrounding them, such as 1, 2, 3, 232547635, etc.
-        Strings are any ASCII character (with a few exceptions) that is surrounded by single or double quotes. The rule is that you can't use
-        single-quotes within single-quotes and double-quotes within double-quotes, but you can use single-quotes within double-quotes and visa versa.
-        Booleans values are either "true" or "false", but they aren't put within quotes. They are built into Javascript. It's hard to describe
-        why they're useful until you see them in action, but trust me when I say they are.</h2>
+        Strings are any ASCII character (with a few exceptions) that is surrounded by single or double quotes. The rule is that you can't use single-quotes within single-quotes and double-quotes within double-quotes, but you can use single-quotes within double-quotes and visa versa. Booleans values are either "true" or "false", but they aren't put within quotes. They are built into Javascript. It's hard to describe why they're useful until you see them in action, but trust me when I say they are.</h2>
       </div><br>
       </div>
 
@@ -37,41 +34,51 @@
       }
     </div><br>
     <div class="content-variables text-center">
-      <p>
-        Ahhh, the world "variable". Reminds you of that amazing time you had all the way through math after algebra started. It's the same type of thing,
-        but you can store more than one primitive data type in it. In fact, you can store everything we're going to talk about in a variable
-        and it's super useful to learn because of how versatile using them can be. Right now, though, let's start with the basics.
-      </p>
-      <p>
+      <h2>
+        Ahhh, the world "variable". Reminds you of that amazing time you had all the way through math after algebra started. It's the same type of thing, but you can store more than one primitive data type in it. In fact, you can store everything we're going to talk about in a variable and it's super useful to learn because of how versatile using them can be. Right now, though, let's start with the basics.
+      </h2>
+      <h2>
         var x = 2; <br>
         var y = "Hello";<br>
         var z = true;
-      </p>
-      <p>
-        There are a few rules that you are going to have to play by from the beginning. When you "declare" a variable for the first time, you will put "var"
-        before it, the name of the variable, the assignment operator "=", then the value of the variable, followed by a semi-colon. If you have seen other
-        programming languages, you might have seen other things like "int", "float", "bool", or something similar, in the place of "var". That is the beautiful
-        part of Javascript. In some other lanugages, you have to declare the type of value that the variable will contain. Javascript knows what kind of value
+      </h2>
+      <h2>
+        There are a few rules that you are going to have to play by from the beginning. When you "declare" a variable for the first time, you will put "var" before it, the name of the variable, the assignment operator "=", then the value of the variable, followed by a semi-colon. If you have seen other programming languages, you might have seen other things like "int", "float", "bool", or something similar, in the place of "var". That is the beautiful part of Javascript, though. All you need to write next to the variable is "var". In some other lanugages, you have to declare the type of value that the variable will contain. Javascript knows what kind of value
         you are assigning. Javascript is awesome like that.
-      </p>
-      <p>
-        So now that you know how to declare variables, let's use them in the next step!
-      </p><br>
+      </h2>
+      <h2>
+        So now that you know how to declare variables, it's your turn to practice!
+      </h2><br>
+      <h2 class="text-center">Let's make a few variables!</h2>
+
+
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <div class="row code-examples">
+            <div class="col-md-8 col-md-offset-2">
+              <div class="code-block">
+              <code>
+                //Make a variable named dozen and assign a value of 12; <br>
+                var <input type="text" ng-model='var_ex1_var'> = <input type="text" ng-model="var_ex1_val">; <br><br>
+                //Make a variable named cokeOrPepsi and assign a value of either Coke or Pepsi, whichever you like more <br>
+                //Remember that your have to wrap strings in single or double quotes. If you don't, the browser will think it is a variable and throw and error. <br>
+                var <input type="text" ng-model='var_ex2_var'> = <input type="text" ng-model="var_ex2_val">; <br><br>
+                //Make a variable called javascriptIsAwesome and assign a true or false value. <br>
+                //Remember that true and false are hard coded into Javascript, so no quotes are used. If you use them, it will PROBABLY throw an error because it's not the correct type of value. Note: I say "probably" because it depends on how the comparison was written on the back-side. You will see what I mean in the next step. <br>
+                var <input type="text" ng-model='var_ex3_var'> = <input type="text" ng-model="var_ex3_val">; <br><br><br>
+
+                <button class="btn btn-primary" ng-click="checkVarAnswers()">Click to check your answers!</button>
+              </code>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <p class="text-right">
         Next
       </p>
 
     </div>
-
-
-
-
-
-
-
-
-
-
-
   </div>
 </div>
