@@ -5,9 +5,13 @@
       <hr>
     </div>
     <div class="content-container">
-      <step-one-overview></step-one-overview>
 
-      <code-block>
+      <button class="btn btn-default" ng-click='showOverview = !showOverview'> Overview </button>
+      <button class="btn btn-default" ng-click='showCode = !showCode'> Lessons </button>
+
+      <step-one-overview ng-if="!showOverview"></step-one-overview>
+
+      <code-block ng-if='!showCode'>
         //Make a variable named dozen and assign a value of 12; <br>
         var <input type="text" ng-model='var_ex1_var'> = <input type="text" ng-model="var_ex1_val">; <p ng-show="correctStuff.var_ex1" style='color: green;'> Correct </p><br><br>
         //Make a variable named cokeOrPepsi and assign a value of either Coke or Pepsi, whichever you like more <br>
