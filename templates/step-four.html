@@ -80,6 +80,34 @@
       <h1>Conclusion</h1>
       <h2>Loops aren't a difficult feat to accomplish. They just take practice and experience to see why they are so useful.</h2>
     </div><br>
+
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <div class="row code-examples">
+          <div class="col-md-10 col-md-offset-1">
+            <div class="code-block">
+            <code>
+              //Make a for-loop using the example above. Standard practice is to use the variable "i" as the counter. If you ever wonder why that is, it stands for "index". It is commonly used in sub-text in math, as well. Let's assign "i" to start at 1 and end at 6, while using console.log (i) in the middle.<br><br>
+              for (var <input type="text" ng-model='loops_ex1_var'> = <input type="text" ng-model="loops_ex1_val">; i < 6 ; i++) { <br>
+                console.log(i); <br>
+              }<br><p ng-show="correctStuff.loops_ex1" style='color: green;'> Correct. This will log 1, 2, 3, 4, 5 into the browser console. </p><br><br>
+
+              //Make a while-loop with variable 'i' starting at 1, log the same numbers into the browser's console as we did before.<br>
+              //Remember that you MUST declare the index variable before the loop and increment it inside of the loop, otherwise you will go into an inifinite loop and crash your browser. If that happens, don't worry. Just close and reopen your browser and it should work fine.<br><br>
+              var i = 1; <br>
+              while ( <input type="text" ng-model='loops_ex2_var1'> < <input type="text" ng-model='loops_ex2_val'> ) { <br>
+                console.log(i);<br>
+                i++;<br>
+              } <p ng-show="correctStuff.loops_ex2" style='color: green;'> Correct </p> <br><br>
+
+              <button class="btn btn-primary" ng-click="checkLoopAnswers()">Click to check your answers!</button>
+            </code>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="text-center">
       <br>
       <a ui-sref="step-five">
@@ -89,18 +117,5 @@
       </a>
 
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
   </div>
 </div>
