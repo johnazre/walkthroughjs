@@ -53,4 +53,6 @@ angular.module('WalkthroughJS').controller('stepsCtrl', function ($scope) {
     if($scope.obj_ex3_var === 'emptyObj' && $scope.obj_ex3_key === 'lastName' && $scope.obj_ex3_val.toLowerCase() === 'jameson') { $scope.obj_ex3 = true;}
   }
 
+  
+
 });
