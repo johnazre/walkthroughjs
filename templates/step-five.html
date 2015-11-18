@@ -4,133 +4,37 @@
       <h1 class="steps-heading">Step Five: Arrays</h1>
       <hr>
     </div>
-    <div class="page-content text-center">
-      <div class="content-numbers">
-        <h2>Simply, arrays are a list of values, separated by commas, surrounded in square brackets. There's not a whole lot more to it
-          than that. They are incredibly useful to know how to use and even more useful to know how to search and pinpoint, especially
-          when it comes to JSON and things like that.
-          The major topics we will hit on are:</h2><br>
-        <ul class="text-center">
-          <li>
-            <h3>Overivew of an array</h3>
-          </li>
-          <li>
-            <h3>Looping through arrays</h3>
-          </li>
-        </ul><br>
-
-
-        <h1>Overview of an array</h1>
-        <h2>Like we said before, an array is simply a list of values, separated by commas, and surrounded by square brackets. Your question
-        should now be, though, how do I access a value in said array? AHA! Let's find out with the example below:</h2>
-      </div><br>
-    </div>
-
-    <div class="row">
-      <div class="col-md-8 col-md-offset-2">
-        <div class="row code-examples">
-          <div class="col-md-8 col-md-offset-2">
-            <div class="code-block">
-            <code>
-              //Empty arrays are useful for a place to put values. You can declare them empty with no issues.<br>
-              var emptyArray = []; <br><br>
-              //You don't have to declare an array any differently than anything other value on the left side.<br>
-              var arrayWithValues = [1, 2, 3, 4];<br><br>
-              //Arrays can have any type of value in it, even mixed values!<br>
-              var mixedArray = [1, "2", 3, function four { console.log('4')}];<br><br>
-              //We can access a value in the array by using: nameOfTheArray[index]<br><br>
-              //REMEMBER!!! Arrays are zero-indexed, so if you want the first value in the array, use index zero!
-              Let's use the arrayWithValues array to pull a couple values. <br>
-              arrayWithValues[1]; //Will pull the second value, 2.
-              arrayWithValues[2]; //Will pull the third value, 3.
-            </code>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="page-content text-center">
-      <div class="content-numbers">
-        <h2>Let's talk about how these can be useful by touching on how to loop through arrays with a for-loop.</h2>
-      </div><br>
-    </div>
-
-    <br>
-    <div class="content-functions text-center">
-      <h1>While Loop</h1>
-      <h2>While loops are useful for situations that you're not 100% sure about how much stuff you're going to have to loop through</h2><br>
-
-      <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-          <div class="row code-examples">
-            <div class="col-md-8 col-md-offset-2">
-              <div class="code-block text-left">
-                <code>
-                  //Let's declare an array, so we have something to loop through: <br>
-                  var array = [1, "apple", 3, "business"]; <br><br>
-                  //Now, let's print out all of the values in the array. <br>
-                  for (var i = 0; i < array.length; i++){<br>
-                   console.log(array[i]);<br>
-                  }<br>
-                  //Will log: 1, apple, 3, and business;<br>
-                 </code>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div><br>
-
-      <h1>Conclusion</h1>
-      <h2>Arrays are absolutely fundamental to learning Javascript. Knowing how to search and manipulate arrays is one of the
-      most useful skill you can learn, other than manipulating objects, which we're going to learn about next.</h2>
-    </div><br>
+    
     <div class="text-center">
-      <br>
-      <a ui-sref="step-six">
-        <p class="text-right">
-          Next
-        </p>
-      </a>
-
+      <button class="btn btn-default btn-lg" ng-click='showOverview = !showOverview'> Show/Hide Overview </button>
+      <button class="btn btn-default btn-lg" ng-click='showCode = !showCode'> Show/Hide Lessons </button>
     </div>
 
-    <div class="row">
-      <div class="col-md-8 col-md-offset-2">
-        <div class="row code-examples">
-          <div class="col-md-8 col-md-offset-2">
-            <div class="code-block">
-            <code>
-              //Create an empty array called 'emptyArray'. <br>
-              var <input type="text" ng-model='arr_ex1_var'> = <input type="text" ng-model="arr_ex1_val">; <p ng-show="correctStuff.arr_ex1" style='color: green;'> Correct </p><br><br>
+    <step-five-overview ng-if="!showOverview"></step-five-overview>
+    <code-block ng-if='!showCode'>
+      //Create an empty array called 'emptyArray'. <br>
+      var <input type="text" ng-model='arr_ex1_var'> = <input type="text" ng-model="arr_ex1_val">; <p ng-show="correctStuff.arr_ex1" style='color: green;'> Correct </p><br><br>
 
-              //Let's add a few values to this array. We're going to call a function called "push". It's a built-in function in Javascript that allows you to attach new values to the end of an array. There are a lot more functions that you can use to manipulate arrays, as well. <br>
-              <input type="text" ng-model='arr_ex2_var' placeholder="Name of the function...">.push(1, 2, 3); <p ng-show="correctStuff.arr_ex2" style='color: green;'> Correct. We just pushed the values 1, 2, and 3 into the array, in that order. </p> <br><br>
+      //Let's add a few values to this array. We're going to call a function called "push". It's a built-in function in Javascript that allows you to attach new values to the end of an array. There are a lot more functions that you can use to manipulate arrays, as well. <br>
+      <input type="text" ng-model='arr_ex2_var' placeholder="Name of the function...">.push(1, 2, 3); <p ng-show="correctStuff.arr_ex2" style='color: green;'> Correct. We just pushed the values 1, 2, and 3 into the array, in that order. </p> <br><br>
 
-              //So, now the array looks like this: [1, 2, 3] <br>
-              //Go ahead and log the first value in this array to the console: <br>
-              <input type="text" ng-model='arr_ex3_var' placeholder="Name of the function...">[<input type="text" ng-model="arr_ex3_val" placeholder="Index...">]; <p ng-show="correctStuff.arr_ex3" style='color: green;'> Correct, since arrays are zero-indexed, 1 is the 0th index of the array. </p> <br><br><br>
+      //So, now the array looks like this: [1, 2, 3] <br>
+      //Go ahead and log the first value in this array to the console: <br>
+      <input type="text" ng-model='arr_ex3_var' placeholder="Name of the function...">[<input type="text" ng-model="arr_ex3_val" placeholder="Index...">]; <p ng-show="correctStuff.arr_ex3" style='color: green;'> Correct, since arrays are zero-indexed, 1 is the 0th index of the array. </p> <br><br><br>
 
-              <button class="btn btn-primary" ng-click="checkArrayAnswers()">Click to check your answers!</button>
-            </code>
-            </div>
-          </div>
+      <button class="btn btn-primary" ng-click="checkArrayAnswers()">Click to check your answers!</button>
+    </code-block>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 text-left">
+          <button class="btn btn-default" ui-sref="step-four"> Previous </button>
+        </div>
+        <div class="col-md-6 text-right">
+          <button class="btn btn-default" ui-sref="step-six"> Next </button>
         </div>
       </div>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   </div>
 </div>
