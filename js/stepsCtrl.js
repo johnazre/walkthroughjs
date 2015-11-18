@@ -14,6 +14,9 @@ angular.module('WalkthroughJS').controller('stepsCtrl', function ($scope) {
     'arr_ex1': false,
     'arr_ex2': false,
     'arr_ex3': false,
+    'obj_ex1': false,
+    'obj_ex2': false,
+    'obj_ex3': false,
   };
 
   $scope.checkVarAnswers = function () {
@@ -42,6 +45,12 @@ angular.module('WalkthroughJS').controller('stepsCtrl', function ($scope) {
     if($scope.arr_ex1_var === 'emptyArray' && $scope.arr_ex1_val) { $scope.correctStuff.arr_ex1 = true; }
     if($scope.arr_ex2_var === 'emptyArray') { $scope.correctStuff.arr_ex2 = true; }
     if($scope.arr_ex3_var === 'emptyArray' && $scope.arr_ex3_val === '0') { $scope.correctStuff.arr_ex3 = true; }
+  }
+
+  $scope.checkObjAnswers = function () {
+    if($scope.obj_ex1_var === 'emptyObj' && $scope.obj_ex1_val === '{}') { $scope.correctStuff.obj_ex1 = true;}
+    if($scope.obj_ex2_var === 'emptyObj' && $scope.obj_ex2_key === "firstName" && $scope.obj_ex2_val.toLowerCase() === "james") { $scope.obj_ex2 = true;}
+    if($scope.obj_ex3_var === 'emptyObj' && $scope.obj_ex3_key === 'lastName' && $scope.obj_ex3_val.toLowerCase() === 'jameson') { $scope.obj_ex3 = true;}
   }
 
 });
