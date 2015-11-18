@@ -62,7 +62,7 @@
       <div class="row">
         <div class="col-md-8 col-md-offset-2">
           <div class="row code-examples">
-            <div class="col-md-6 col-md-offset-3">
+            <div class="col-md-8 col-md-offset-2">
               <div class="code-block">
                 <code> > (Greater than), < (Less than)<br>
                    >= (Greater Than or Equal To), <= (Less Than or Equal To) <br>
@@ -144,6 +144,32 @@
       All things considered, conditionals are fairly straightforward, minus a few things. There's also something called a "Switch" statement that
       is used in a slim, case-by-case basis, but I'll let you read up on that elsewhere. On to loops!
       </h2>
+
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <div class="row code-examples">
+            <div class="col-md-8 col-md-offset-2">
+              <div class="code-block text-left">
+              <code>
+                //Let's declare two variables so we can compare them. Call the first variable "x" and assign a value of 5, then make a second variable called "y" and assign a value of 10.<br>
+                var <input type="text" ng-model='cond_ex1_var1'> = <input type="text" ng-model="cond_ex1_val1">; <p ng-show="correctStuff.cond_ex1" style='color: green;'> Correct </p><br>
+                var <input type="text" ng-model='cond_ex1_var2'> = <input type="text" ng-model="cond_ex1_val2">; <p ng-show="correctStuff.cond_ex2" style='color: green;'> Correct </p><br><br>
+
+                // Start by inputting y is greater than x and we'll see what the output is.<br>
+                // <br>
+                if (<input type="text" ng-model='cond_ex2_var1'> > <input type="text" ng-model="cond_ex2_var2">) { console.log("y is greater than x") <br>
+              } else{<br>
+              console.log("x is greater than y");}<p ng-show="correctStuff.cond_ex3" style='color: green;'> Correct, console.log would show "y is greater than x" in the browser console. </p>  <br>
+                // What would happen if we input that x > y? The if-statement would be false, so it would skip to the "else" part and execute that code, which in this case is printing "x is greater than y" in the console.<br>
+
+                <button class="btn btn-primary" ng-click="checkCondAnswers()">Click to check your answers!</button>
+              </code>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
 
       <br>
       <a ui-sref="step-four">
