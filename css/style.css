@@ -109,3 +109,14 @@ footer{
 .fade.ng-leave.ng-leave-active {
   opacity:0;
 }
+
+/*------------Modal------------*/
+
+.modalMenu button{
+  width: 100%;
+}
+
+li div .btn {
+  background-color: black;
+  margin-top: 8px;
+}
