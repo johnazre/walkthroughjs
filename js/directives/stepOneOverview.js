@@ -40,7 +40,17 @@ angular.module('WalkthroughJS').directive('stepOneOverview', function () {
       '<h2>' +
         'So now that you know how to declare variables, it is your turn to practice!' +
       '</h2><br>' +
-      '<h2 class="text-center"> Now we will make a few variables!</h2>'
-  }
+      '<h2 class="text-center"> Now we will make a few variables!</h2>',
+      transclude: true,
+
+      link: function(scope, element, attrs, ctrl, transclude) {
+
+        transclude(scope.$parent, function(clone, scope) {
+          element.append(clone);
+        });
+      },
+
+  };
+
 
 });
