@@ -1,7 +1,5 @@
 angular.module('WalkthroughJS').controller('homeCtrl', function ($scope, $uibModal, $log) {
 
-  $scope.items = ['item1', 'item2', 'item3'];
-
   $scope.animationsEnabled = true;
 
   $scope.open = function (size) {

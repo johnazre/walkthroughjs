@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" ng-controller='stepsCtrl'>
   <div class="row">
     <div class="col-md-12 text-center">
       <h1 class="steps-heading">Step One: Primitive Data Types and Variables</h1>
@@ -11,18 +11,31 @@
 
       <step-one-overview ng-if="!showOverview"></step-one-overview>
 
-      <code-block ng-if='!showCode'>
-        //Make a variable named dozen and assign a value of 12; <br>
-        var <input type="text" ng-model='var_ex1_var'> = <input type="text" ng-model="var_ex1_val">; <p ng-show="correctStuff.var_ex1" style='color: green;'> Correct </p><br><br>
-        //Make a variable named cokeOrPepsi and assign a value of either Coke or Pepsi, whichever you like more <br>
-        //Remember that your have to wrap strings in single or double quotes. If you don't, the browser will think it is a variable and throw and error. <br>
-        var <input type="text" ng-model='var_ex2_var'> = <input type="text" ng-model="var_ex2_val">; <p ng-show="correctStuff.var_ex2" style='color: green;'> Correct </p> <br><br>
-        //Make a variable called javascriptIsAwesome and assign a true or false value. <br>
-        //Remember that true and false are hard coded into Javascript, so no quotes are used. If you use them, it will PROBABLY throw an error because it's not the correct type of value. Note: I say "probably" because it depends on how the comparison was written on the back-side. You will see what I mean in the next step. <br>
-        var <input type="text" ng-model='var_ex3_var'> = <input type="text" ng-model="var_ex3_val">; <p ng-show="correctStuff.var_ex3" style='color: green;'> Correct </p> <br><br><br>
+      <code-block ng-if="!showCode">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+            <div class="row code-examples">
+              <div class="col-md-8 col-md-offset-2">
+                <div class="code-block">
+                  <code>
+                    //Make a variable named dozen and assign a value of 12; <br>
+                    var <input type="text" ng-model='var_ex1_var'> = <input type="text" ng-model="var_ex1_val">; <p ng-show="correctStuff.var_ex1" style='color: green;'> Correct </p><br><br>
+                    //Make a variable named cokeOrPepsi and assign a value of either Coke or Pepsi, whichever you like more <br>
+                    //Remember that your have to wrap strings in single or double quotes. If you don't, the browser will think it is a variable and throw and error. <br>
+                    var <input type="text" ng-model='var_ex2_var'> = <input type="text" ng-model="var_ex2_val">; <p ng-show="correctStuff.var_ex2" style='color: green;'> Correct </p> <br><br>
+                    //Make a variable called javascriptIsAwesome and assign a true or false value. <br>
+                    //Remember that true and false are hard coded into Javascript, so no quotes are used. If you use them, it will PROBABLY throw an error because it's not the correct type of value. Note: I say "probably" because it depends on how the comparison was written on the back-side. You will see what I mean in the next step. <br>
+                    var <input type="text" ng-model='var_ex3_var'> = <input type="text" ng-model="var_ex3_val">; <p ng-show="correctStuff.var_ex3" style='color: green;'> Correct </p> <br><br><br>
 
-        <button class="btn btn-primary" ng-click="checkVarAnswers()">Click to check your answers!</button>
+                    <button class="btn btn-primary" ng-click="checkVarAnswers()">Click to check your answers!</button>
+                  </code>
+                </div>
+              </div>
+           </div>
+          </div>
+        </div>
       </code-block>
+
 
       <div class="container">
         <div class="row">
